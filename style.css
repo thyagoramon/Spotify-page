@@ -1,0 +1,404 @@
+html, body {
+    width: 100vw;   /* Largura total da tela */
+    height: 100vh;  /* Altura total da tela */
+    margin: 0;      /* Remove margens padrão */
+    padding: 0;     /* Remove paddings padrão */
+    background-color: var(--cor_back); /*cor do fundo da tela*/
+    color: var(--cor_texto); /*cor do texto geral*/
+    font-family: var(--fonte); /*fonte geral*/
+    overflow: hidden; /*impede o scroll na tela, permitindo definir onde aparecer*/
+}
+
+.tela {
+    display: flex; /*ativa o flexbox*/
+    flex-direction: column; /*organização dos elementos em coluna*/
+    justify-content: flex-start; /*distribuição a partir da topo*/
+    align-items: center; /*elementos alinhados no centro*/
+    width: 100vw; /*largura total*/
+    height: 100vh; /*altura total*/
+}
+
+.main { /*parte principal da tela, superior*/
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    flex:1; /*oculpa todo o espaço restante*/
+    max-width: 90vw; /*largura máxima*/
+}
+
+/*LATERAL ESQUERDA*/
+
+.barra-esq {
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+    padding: 10px;
+}
+
+.barra-esq .fa {
+    margin-right: 10px;
+}
+
+.barra-esq .opcao { /*opções da barra lateral*/
+    color: var(--cor_texto);
+    font-size: var(--texto_tam_link);
+    font-weight: var(--texto_wei_link);
+    text-decoration: none; /*remove elementos decorativos dos textos*/
+    transition: 0.3s ease; /*duração da transição do hover*/
+}
+
+.barra-esq .opcao:hover {
+    color: var(--cor_verde);
+}
+
+.barra-esq .botao {
+    background-color: #fff;
+    color: var(--cor_painel_2);
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.barra-esq .botao:hover {
+    background-color: var(--cor_verde);
+}
+
+.navegacao {
+    background-color: var(--cor_painel);
+    border-radius: var(--borda);
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
+.navegacao .logo img {
+    width: 120px;
+    margin-bottom: 20px;
+}
+
+.navegacao .logo img:hover {
+    content: url(assets/icons/logo-spotify-verde.png); /*troca a imagem durante o hover*/
+}
+
+.navegacao .inicio {
+    margin-bottom: 20px;
+}
+
+.playlists {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor_painel);
+    border-radius: var(--borda);
+    padding: 20px;    
+}
+
+.playlists .biblioteca {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.playlists .crie {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    background-color: var(--cor_painel_2);
+    border-radius: var(--borda);
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.playlists .crie h3 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.playlists .crie h4 {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.playlists .cookies {
+    margin-bottom: 40px;
+}
+
+.playlists .cookies a {
+    text-decoration: none;
+    color: var(--cor_texto);
+    font-size: 14px;
+}
+
+.playlists .cookies a:hover {
+    color: var(--cor_verde);
+}
+
+.playlists .idioma button{
+    background-color: transparent;
+    color: var(--cor_texto);
+    border: 2px solid; /*cria uma borda no elemento*/
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.playlists .idioma button:hover {
+    color: var(--cor_verde);
+}
+
+/*LATERAL ESQUERDA*/
+/*LATERAL DIREITA*/
+
+.barra-dir {
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    padding: 10px 10px 10px 0;
+}
+
+.superior {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--cor_painel);
+    height: 80px;
+    border-radius: var(--borda);
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.superior .sup_setas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.superior .sup_setas a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: var(--cor_back);
+    color: var(--cor_texto);
+    font-size: 20px;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.superior .sup_setas a:hover {
+    color: var(--cor_verde);
+}
+
+.superior .sup_login {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+.superior .sup_login .sup_login_inscreva {
+    text-decoration: none;
+    color: var(--cor_texto);
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 20px;
+}
+
+.superior .sup_login .sup_login_inscreva:hover {
+    color: var(--cor_verde);
+}
+
+.superior .sup_input {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 40%;
+    background-color: var(--cor_painel_2);
+    padding: 10px 20px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+.superior .sup_input:hover {
+    background-color: var(--cor_verde_trans);
+}
+
+.superior .sup_input span {
+    margin-right: 20px;
+    color: var(--cor_texto);
+    font-size: 18px;
+}
+
+.superior .sup_input input {
+    text-decoration: none;
+    background-color: transparent;
+    color: var(--cor_texto);
+    font-size: 18px;
+    width: 100%;
+    border: none; /*remove o contorno*/
+    outline: none; /*remove o contorno da caixa ao clicar*/
+    text-overflow: ellipsis; /*o que aparece quando digita muito*/
+    overflow: hidden; /*oculta o conteúdo que vazar do elemento*/
+    white-space: nowrap; /*evita criar linhas*/
+}
+
+.superior .sup_login .sup_login_entrar {
+    background-color: #fff;
+    color: var(--cor_painel_2);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.superior .sup_login .sup_login_entrar:hover {
+    background-color: var(--cor_verde);
+}
+
+/*parte superior*/
+/*parte principal*/
+
+::-webkit-scrollbar {
+    display: none; /*remove a barra de scroll*/
+}
+
+.conteudo {
+    background-color: var(--cor_painel);
+    border-radius: var(--borda);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    align-content: center;
+    max-height: calc(100vh - 210px); /*altura max, necessária para o scroll funcionar adequadamente*/
+}
+
+.conteudo .mensagem {
+    padding: 20px;
+    color: #fff;
+}
+
+.conteudo .mensagem h1 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.conteudo .mensagem h2 {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.conteudo .grid{    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    align-content: start;
+    flex-wrap: wrap; /*permite criar linhas para distribuir os elementos*/
+    overflow-y: auto; /*habilita o scroll*/
+}
+
+.conteudo .card {
+    background-color: var(--cor_painel_2);
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    text-decoration: none;
+    position: relative; /*define que este é o elemento de referencia para posivionar os elementos filhos*/
+    overflow: hidden; /*oculta o que estão fora*/
+    margin: 10px;
+    transition: transform 0.2s ease; /* Animação do hover suave */
+}
+
+.conteudo .card:hover {
+    background-color: var(--cor_verde_trans);
+    transform: scale(1.1); /*alteração de tamanho durante o hover*/
+}
+
+.conteudo .card span {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.conteudo .card img {
+    position: absolute; /*define que este elemento tem sua posição defenida em relação ao elemetno pai*/
+    height: 160px;
+    top: 100px; /*distância do topo*/
+    left: 100px; /*distância da esquerda*/
+    rotate: 30deg; /*rotação*/
+}
+
+/*parte principal*/
+/*footer*/
+
+.footer {
+    position: fixed; /*mantem o elemento fixo*/
+    bottom: 0; /*posição*/
+    left: 0; /*posição*/
+    right: 0; /*posição*/
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, rgb(255, 0, 221), blue); /*fundo com degradê*/
+}
+
+.footer .campanha {
+    height: 70%;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer .campanha_oferta h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.footer .campanha_oferta h4 {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.footer .campanha_botao button{
+    background-color: #fff;
+    color: black;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+.footer .campanha_botao button:hover {
+    background-color: var(--cor_verde);
+}

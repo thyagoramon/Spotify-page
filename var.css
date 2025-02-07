@@ -1,0 +1,12 @@
+:root {
+    --cor_back: #121212;
+    --borda: 20px;
+    --cor_painel: #181818;
+    --cor_painel_2: #242424;
+    --cor_texto: #b3b3b3;
+    --cor_verde: #1ed760;
+    --fonte: "DM Sans", serif;   
+    --texto_tam_link: 18px;
+    --texto_wei_link: 700;
+    --cor_verde_trans: rgba(30, 215, 96, 0.2);
+}
